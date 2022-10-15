@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MRTRModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TCMB_KUR_CRMPOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TARIH" Type="datetime" />
+          <Property Name="ALIS" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="SATIS" Type="decimal" Precision="18" Scale="8" />
+          <Property Name="DOVIZ_AD" Type="bigint" />
+          <Property Name="SIRA" Type="int" />
+        </EntityType>
+        <EntityContainer Name="MRTRModelStoreContainer">
+          <EntitySet Name="TCMB_KUR_CRMPOS" EntityType="Self.TCMB_KUR_CRMPOS" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MRTRModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TCMB_KUR_CRMPOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TARIH" Type="DateTime" Precision="3" />
+          <Property Name="ALIS" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="SATIS" Type="Decimal" Precision="18" Scale="8" />
+          <Property Name="DOVIZ_AD" Type="Int64" />
+          <Property Name="SIRA" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="MRTREntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TCMB_KUR_CRMPOS" EntityType="Self.TCMB_KUR_CRMPOS" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MRTRModelStoreContainer" CdmEntityContainer="MRTREntities">
+          <EntitySetMapping Name="TCMB_KUR_CRMPOS">
+            <EntityTypeMapping TypeName="MRTRModel.TCMB_KUR_CRMPOS">
+              <MappingFragment StoreEntitySet="TCMB_KUR_CRMPOS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="ALIS" ColumnName="ALIS" />
+                <ScalarProperty Name="SATIS" ColumnName="SATIS" />
+                <ScalarProperty Name="DOVIZ_AD" ColumnName="DOVIZ_AD" />
+                <ScalarProperty Name="SIRA" ColumnName="SIRA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

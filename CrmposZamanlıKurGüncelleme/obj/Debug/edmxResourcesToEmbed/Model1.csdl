@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MRTRModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TCMB_KUR_CRMPOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TARIH" Type="DateTime" Precision="3" />
+    <Property Name="ALIS" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="SATIS" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="DOVIZ_AD" Type="Int64" />
+    <Property Name="SIRA" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="MRTREntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TCMB_KUR_CRMPOS" EntityType="Self.TCMB_KUR_CRMPOS" />
+  </EntityContainer>
+</Schema>

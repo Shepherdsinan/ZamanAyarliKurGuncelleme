@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MRTRModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TCMB_KUR_CRMPOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TARIH" Type="datetime" />
+    <Property Name="ALIS" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="SATIS" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="DOVIZ_AD" Type="bigint" />
+    <Property Name="SIRA" Type="int" />
+  </EntityType>
+  <EntityContainer Name="MRTRModelStoreContainer">
+    <EntitySet Name="TCMB_KUR_CRMPOS" EntityType="Self.TCMB_KUR_CRMPOS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

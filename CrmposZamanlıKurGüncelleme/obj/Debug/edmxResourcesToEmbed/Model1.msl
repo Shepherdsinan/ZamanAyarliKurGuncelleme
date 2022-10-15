@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MRTRModelStoreContainer" CdmEntityContainer="MRTREntities">
+    <EntitySetMapping Name="TCMB_KUR_CRMPOS">
+      <EntityTypeMapping TypeName="MRTRModel.TCMB_KUR_CRMPOS">
+        <MappingFragment StoreEntitySet="TCMB_KUR_CRMPOS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="ALIS" ColumnName="ALIS" />
+          <ScalarProperty Name="SATIS" ColumnName="SATIS" />
+          <ScalarProperty Name="DOVIZ_AD" ColumnName="DOVIZ_AD" />
+          <ScalarProperty Name="SIRA" ColumnName="SIRA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
